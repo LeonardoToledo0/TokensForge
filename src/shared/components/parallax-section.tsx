@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { Divider } from "./divider";
 
 
 
@@ -27,10 +28,13 @@ const steps = [
 export const ParallaxSections: React.FC = () => {
     return (
         <>
-            <section className="w-full py-20  bg-black">
-                <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-white">
-                    Como Funciona
-                </h2>
+            <section className="w-full my-10  bg-black">
+                <div className="flex flex-col justify-center items-center my-10">
+
+                    <Divider title=" Como Funciona" />
+
+                </div>
+
 
                 <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-7xl mx-auto px-4">
                     {steps.map((step, index) => (

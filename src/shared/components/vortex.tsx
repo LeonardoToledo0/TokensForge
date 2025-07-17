@@ -13,6 +13,7 @@ import { ParallaxSections } from "./parallax-section";
 import { AnimatedCounter } from "./animated-counter";
 import { TimelineDapp } from "./timeline-dapp";
 import { TokenForm } from "./forms";
+import { InfiniteMovingCardsTestimonials } from "./testimonials";
 
 interface VortexProps {
     children?: React.ReactNode;
@@ -281,6 +282,9 @@ export const Vortex = (props: VortexProps) => {
 
                     </div>
                     <TokenForm />
+
+                    <InfiniteMovingCardsTestimonials />
+
                 </div>
             </div>
         </>
