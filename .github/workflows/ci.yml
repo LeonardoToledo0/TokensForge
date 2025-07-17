@@ -1,0 +1,29 @@
+name: CI - Build e Lint (Yarn)
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar o repositório
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup do Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 📦 Instalar dependências (Yarn)
+        run: yarn install --frozen-lockfile
+
+      - name: ✅ Rodar build
+        run: yarn build
+
+      - name: 🧹 Rodar lint
+        run: yarn lint
