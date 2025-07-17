@@ -14,6 +14,8 @@ import { AnimatedCounter } from "./animated-counter";
 import { TimelineDapp } from "./timeline-dapp";
 import { TokenForm } from "./forms";
 import { InfiniteMovingCardsTestimonials } from "./testimonials";
+import { FaqSection } from "./faq-section";
+import { Footer } from "./footer";
 
 interface VortexProps {
     children?: React.ReactNode;
@@ -282,8 +284,9 @@ export const Vortex = (props: VortexProps) => {
 
                     </div>
                     <TokenForm />
-
                     <InfiniteMovingCardsTestimonials />
+                    <FaqSection />
+                    <Footer />
 
                 </div>
             </div>
